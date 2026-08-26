@@ -3,38 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Une Surprise pour Toi 🎉</title>
+    <title>Pour Pauline 🎉</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Particules d'arrière-plan -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
     <!-- Page de la question -->
     <div class="container" id="questionPage">
-        <div class="stars"></div>
         <div class="card question-card">
             <div class="animated-emoji">✨</div>
-            <h1 class="title">Une Question Importante...</h1>
-            <p class="question">Es-tu disponible samedi soir pour une surprise ? 🎁</p>
+            <h1 class="title">Pauline... 💕</h1>
+            <p class="question">Es-tu disponible samedi soir pour une surprise ?</p>
             
             <div class="buttons-container">
                 <button class="btn btn-yes" id="yesBtn" onclick="goToSurprise()">Oui</button>
-                <button class="btn btn-no" id="noBtn" onmouseover="moveButton()" onclick="changeToYes()">Non</button>
-            </div>
-            
-            <div class="floating-hearts">
-                <span class="heart">💕</span>
-                <span class="heart">💕</span>
-                <span class="heart">💕</span>
-                <span class="heart">💕</span>
-                <span class="heart">💕</span>
+                <button class="btn btn-no" id="noBtn" onmouseover="moveButton()" onclick="goToSurprise()">Non</button>
             </div>
         </div>
     </div>
 
     <!-- Page de la surprise -->
     <div class="container hidden" id="surprisePage">
-        <div class="stars"></div>
-        <div class="confetti"></div>
-        
         <div class="card surprise-card">
             <div class="celebration">
                 <span class="emoji">🎉</span>
@@ -79,7 +76,10 @@
                 </div>
             </div>
             
-            <p class="final-message">À très bientôt pour cette belle surprise ! 💕</p>
+            <div class="love-message">
+                <p class="i-love-you">Je t'aime</p>
+                <div class="floating-heart-animation">❤️</div>
+            </div>
         </div>
     </div>
 
