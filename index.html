@@ -7,42 +7,75 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Page de la question -->
     <div class="container" id="questionPage">
-        <div class="card">
-            <h1 class="title">✨ Une Question Important... ✨</h1>
+        <div class="stars"></div>
+        <div class="card question-card">
+            <div class="animated-emoji">✨</div>
+            <h1 class="title">Une Question Importante...</h1>
             <p class="question">Es-tu disponible samedi soir pour une surprise ? 🎁</p>
             
             <div class="buttons-container">
                 <button class="btn btn-yes" id="yesBtn" onclick="goToSurprise()">Oui</button>
                 <button class="btn btn-no" id="noBtn" onmouseover="moveButton()" onclick="changeToYes()">Non</button>
             </div>
+            
+            <div class="floating-hearts">
+                <span class="heart">💕</span>
+                <span class="heart">💕</span>
+                <span class="heart">💕</span>
+                <span class="heart">💕</span>
+                <span class="heart">💕</span>
+            </div>
         </div>
     </div>
 
+    <!-- Page de la surprise -->
     <div class="container hidden" id="surprisePage">
+        <div class="stars"></div>
+        <div class="confetti"></div>
+        
         <div class="card surprise-card">
-            <h1 class="title">🎉 Surprise ! 🎉</h1>
+            <div class="celebration">
+                <span class="emoji">🎉</span>
+                <span class="emoji">🎊</span>
+                <span class="emoji">🎁</span>
+            </div>
+            
+            <h1 class="title">Surprise ! 🎉</h1>
             <p class="subtitle">Tu as bien choisi ! 😉</p>
             
             <div class="details">
                 <div class="detail-item">
-                    <h3>📅 Quand ?</h3>
-                    <p><strong>Samedi 29 août 2026</strong></p>
+                    <div class="detail-icon">📅</div>
+                    <div class="detail-content">
+                        <h3>Quand ?</h3>
+                        <p>Samedi 29 août 2026</p>
+                    </div>
                 </div>
                 
                 <div class="detail-item">
-                    <h3>⏰ À quelle heure ?</h3>
-                    <p><strong>18h30</strong></p>
+                    <div class="detail-icon">⏰</div>
+                    <div class="detail-content">
+                        <h3>À quelle heure ?</h3>
+                        <p>18h30</p>
+                    </div>
                 </div>
                 
                 <div class="detail-item">
-                    <h3>📍 Où ?</h3>
-                    <p><strong>Parking de Blériot-Plage</strong></p>
+                    <div class="detail-icon">📍</div>
+                    <div class="detail-content">
+                        <h3>Où ?</h3>
+                        <p>Parking de Blériot-Plage</p>
+                    </div>
                 </div>
                 
                 <div class="detail-item">
-                    <h3>🧳 Quoi prendre ?</h3>
-                    <p><strong>Des vêtements pour dormir</strong></p>
+                    <div class="detail-icon">🧳</div>
+                    <div class="detail-content">
+                        <h3>À prendre</h3>
+                        <p>Des vêtements pour dormir</p>
+                    </div>
                 </div>
             </div>
             
