@@ -1,23 +1,18 @@
 // Déplacer le bouton "Non" partout sur l'écran
 function moveButton() {
     const noBtn = document.getElementById('noBtn');
+    const rect = noBtn.getBoundingClientRect();
     
-    // Générer des positions aléatoires
-    const randomX = (Math.random() - 0.5) * 400;
-    const randomY = (Math.random() - 0.5) * 400;
+    // Générer des positions aléatoires dans l'écran
+    const maxX = window.innerWidth - rect.width - 20;
+    const maxY = window.innerHeight - rect.height - 20;
     
-    noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
-}
-
-// Changer le bouton "Non" en "Oui"
-function changeToYes() {
-    const noBtn = document.getElementById('noBtn');
-    noBtn.textContent = 'Oui';
-    noBtn.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-    noBtn.style.color = 'white';
-    noBtn.style.border = '2px solid transparent';
-    noBtn.onmouseover = null;
-    noBtn.onclick = goToSurprise;
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+    
+    noBtn.style.position = 'fixed';
+    noBtn.style.left = randomX + 'px';
+    noBtn.style.top = randomY + 'px';
 }
 
 // Aller à la page de la surprise
@@ -34,7 +29,7 @@ function goToSurprise() {
 
 // Lancer des confettis
 function launchConfetti() {
-    const colors = ['#667eea', '#764ba2', '#ff6b6b', '#4ecdc4'];
+    const colors = ['#a8d5ff', '#d4a5ff', '#6ba3d4', '#ffd4e5'];
     
     for (let i = 0; i < 50; i++) {
         const confetti = document.createElement('div');
