@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Une Surprise pour Toi 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="questionPage">
+        <div class="card">
+            <h1 class="title">✨ Une Question Important... ✨</h1>
+            <p class="question">Es-tu disponible samedi soir pour une surprise ? 🎁</p>
+            
+            <div class="buttons-container">
+                <button class="btn btn-yes" id="yesBtn" onclick="goToSurprise()">Oui</button>
+                <button class="btn btn-no" id="noBtn" onmouseover="moveButton()" onclick="changeToYes()">Non</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container hidden" id="surprisePage">
+        <div class="card surprise-card">
+            <h1 class="title">🎉 Surprise ! 🎉</h1>
+            <p class="subtitle">Tu as bien choisi ! 😉</p>
+            
+            <div class="details">
+                <div class="detail-item">
+                    <h3>📅 Quand ?</h3>
+                    <p><strong>Samedi 29 août 2026</strong></p>
+                </div>
+                
+                <div class="detail-item">
+                    <h3>⏰ À quelle heure ?</h3>
+                    <p><strong>18h30</strong></p>
+                </div>
+                
+                <div class="detail-item">
+                    <h3>📍 Où ?</h3>
+                    <p><strong>Parking de Blériot-Plage</strong></p>
+                </div>
+                
+                <div class="detail-item">
+                    <h3>🧳 Quoi prendre ?</h3>
+                    <p><strong>Des vêtements pour dormir</strong></p>
+                </div>
+            </div>
+            
+            <p class="final-message">À très bientôt pour cette belle surprise ! 💕</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
