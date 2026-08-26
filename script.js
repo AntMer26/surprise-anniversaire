@@ -1,11 +1,19 @@
-// Déplacer le bouton "Non" partout sur l'écran
+// Déplacer le bouton "Non" partout sur l'écran après un délai
+function startButtonAnimation() {
+    const noBtn = document.getElementById('noBtn');
+    
+    // Commencer l'animation après 500ms
+    setTimeout(() => {
+        setInterval(moveButton, 2000);
+    }, 500);
+}
+
 function moveButton() {
     const noBtn = document.getElementById('noBtn');
-    const rect = noBtn.getBoundingClientRect();
     
     // Générer des positions aléatoires dans l'écran
-    const maxX = window.innerWidth - rect.width - 20;
-    const maxY = window.innerHeight - rect.height - 20;
+    const maxX = window.innerWidth - 100;
+    const maxY = window.innerHeight - 50;
     
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
@@ -13,6 +21,7 @@ function moveButton() {
     noBtn.style.position = 'fixed';
     noBtn.style.left = randomX + 'px';
     noBtn.style.top = randomY + 'px';
+    noBtn.style.pointerEvents = 'none';
 }
 
 // Aller à la page de la surprise
@@ -70,3 +79,6 @@ function launchConfetti() {
         setTimeout(() => confetti.remove(), duration * 1000);
     }
 }
+
+// Démarrer l'animation du bouton au chargement
+window.addEventListener('load', startButtonAnimation);
